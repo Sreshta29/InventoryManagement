@@ -1,0 +1,64 @@
+<?php include('includes/header.php'); ?>
+
+
+<script type="text/javascript" src="./WebQR/llqrcode.js"></script>
+<script type="text/javascript" src="./WebQR/webqr.js"></script>
+
+<div id="page-wrapper">
+
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="panel panel-default">
+
+				<div class="panel-heading">
+					<strong> <h1>Product Description</h1> </strong>
+				</div>
+
+				<!-- /.panel-heading -->
+				<div class="panel-body">
+
+					<div class="table-responsive">
+						<table class="table table-striped table-bordered table-hover"
+							id="dataTables-example">
+							<tbody>
+            					<tr>
+            						<td valign="top" align="center" width="100%">
+            							<table class="tsel" border="0">
+            								<tbody>
+            									<tr>
+            										<td>
+													<h2>Click on the video to take a picture</h2><img class="selector" id="webcamimg"
+            											src="./WebQR/vid.png" onclick="setwebcam()"
+            											align="left" style="opacity: 1;"></td></tr>
+														
+            										<tr><td>
+													<br>
+													<h2>Click on the camera to open a picture</h2><img class="selector" id="qrimg"
+            											src="./WebQR/cam.png" onclick="setimg()" align="left"
+            											style="opacity: 0.2;"></td>
+            									</tr>
+            									<tr>
+            										<td colspan="2" align="center">
+            											<div id="outdiv">
+            												<video id="v" autoplay=""></video>
+            											</div>
+            										</td>
+            									</tr>
+            								</tbody>
+            							</table>
+            						</td>
+            					</tr>
+            					<tr>
+            						<td colspan="3" align="center">
+            							<div id="result"><h3>The result link by scanning the QR code above</h3></div>
+            						</td>
+            					</tr>
+            					<tr>
+            						<td colspan="3" align="center">
+            							<canvas id="qr-canvas" width="800" height="600" style="width: 800px; height: 600px;"></canvas>
+            							<script type="text/javascript">load();</script>
+            						</td>
+            					</tr>
+            				</tbody> 
+            				
+						</table>
